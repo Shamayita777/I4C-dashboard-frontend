@@ -28,7 +28,7 @@ export const AuthProvider = ({ children }) => {
 
   const login = async (username, password) => {
     try {
-      const response = await axios.post('http://localhost:5000/api/admin/login', {
+      const response = await axios.post("https://i4c-chatbot.onrender.com/api/admin/login", {
         username,
         password
       }, {
@@ -52,7 +52,7 @@ export const AuthProvider = ({ children }) => {
 
   const logout = async () => {
     try {
-      await axios.post('http://localhost:5000/api/admin/logout', {}, {
+      await axios.post("https://i4c-chatbot.onrender.com/api/admin/logout", {}, {
         withCredentials: true
       });
     } catch (error) {
